@@ -2,8 +2,9 @@ from django.shortcuts import render, get_object_or_404,redirect
 from django.http import HttpResponseRedirect
 from usuario.forms import CustomUserCreationForm
 from django.contrib import auth
-from django.utils import timezone
+#from django.utils import timezone
 
+################################################################## USUARIO
 # Create your views here.
 def home(request):
     # Se envia la variable posts
@@ -50,3 +51,6 @@ def invalid_login(request):
 def logout(request):
     auth.logout(request)
     return render(request, 'usuario/logout.html')
+
+
+#####################################################################################################################
